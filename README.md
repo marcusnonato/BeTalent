@@ -12,6 +12,8 @@ A interface permite pesquisar por nome, cargo e telefone, e realiza a formataç�
 
 # Comandos
 
+Instalar dependências: npm install
+
 🚀 Iniciar servidor json-server: npm run server
 
 Iniciar projeto react native no android: npx react-native run-android
