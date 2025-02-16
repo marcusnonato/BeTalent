@@ -3,13 +3,15 @@ Bem-vindo(a) ao meu teste! :)
 
 Este aplicativo exibe uma tabela de colaboradores, consumindo dados de uma API simulada via json-server. A interface permite pesquisar por nome, cargo e telefone, e realiza a formatação de datas e telefones conforme solicitado.
 
+#
+
 Comandos
 Instalação
 bash
 Copiar
 Editar
 yarn install
- ou
+ou
 npm install
 Iniciar o Servidor da API Simulada
 O script está definido no package.json como:
