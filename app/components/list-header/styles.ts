@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
   },
   headerTitlesText: {
     fontSize: 18,
-    fontFamily: fonts.normal,
+    fontFamily: fonts.bold,
     color: colors.black_neural,
   },
   circle: {
