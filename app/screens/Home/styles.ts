@@ -22,7 +22,15 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.gray[200],
     fontFamily: 'Helvetica',
     paddingVertical: 15,
-    paddingStart: 15,
+    paddingStart: 50,
     borderRadius: 30,
+  },
+  searchBarIcon: {
+    position: 'absolute',
+    top: 17,
+    left: 15,
+    zIndex: 10,
+    width: 27,
+    height: 27,
   },
 });

@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {Text, TextInput, View} from 'react-native';
+import {Image, Text, TextInput, View} from 'react-native';
 import Header from '../../components/header';
 import {styles} from './styles';
 
 import EmployeList from '../../components/employe-list';
 import ListHeader from '../../components/list-header';
+import {blackSearchIcon} from '../../assets/images';
 
 function Home() {
   const [search, setSearch] = useState('');
@@ -13,12 +14,15 @@ function Home() {
     <View style={styles.container}>
       <Header />
       <Text style={styles.title}>Funcionários</Text>
-      <TextInput
-        value={search}
-        onChangeText={setSearch}
-        style={styles.input}
-        placeholder="Pesquisar"
-      />
+      <View style={{position: 'relative'}}>
+        <Image source={blackSearchIcon} style={styles.searchBarIcon} />
+        <TextInput
+          value={search}
+          onChangeText={setSearch}
+          style={styles.input}
+          placeholder="Pesquisar"
+        />
+      </View>
       <ListHeader />
       <EmployeList name={search} />
     </View>
