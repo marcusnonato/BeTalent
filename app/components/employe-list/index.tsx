@@ -18,9 +18,12 @@ export interface ISearch {
 }
 
 function EmployeList({name = ''}: ISearch) {
+  const [selectedIndex, setSelectedIndex] = useState<number>();
   const [employees, setEmployees] = useState<IEmployee[]>([]);
   const filteredEmployees = employees.filter(employee =>
-    employee.name.toLocaleLowerCase().includes(name.toLocaleLowerCase()),
+    [employee.name, employee.job, employee.phone].some(field =>
+      field?.toLocaleLowerCase().includes(name.toLocaleLowerCase()),
+    ),
   );
 
   async function fetchEmployees() {
@@ -40,8 +43,18 @@ function EmployeList({name = ''}: ISearch) {
     <FlatList
       data={filteredEmployees}
       keyExtractor={item => item.id}
-      renderItem={item => {
-        return <EmplyeItem employee={item.item} />;
+      renderItem={({item, index}) => {
+        return (
+          <EmplyeItem
+            onPress={() => {
+              selectedIndex === index
+                ? setSelectedIndex(undefined)
+                : setSelectedIndex(index);
+            }}
+            isSeleected={selectedIndex === index ? true : false}
+            employee={item}
+          />
+        );
       }}
       showsVerticalScrollIndicator={false}
       ListFooterComponent={() => <View style={{height: 20}} />}

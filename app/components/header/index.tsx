@@ -1,6 +1,7 @@
 import React from 'react';
-import {SafeAreaView, Text, TouchableOpacity} from 'react-native';
+import {Image, SafeAreaView, Text, TouchableOpacity} from 'react-native';
 import {styles} from './styles';
+import {bellNotificationIcon} from '../../assets/images';
 
 function Header() {
   return (
@@ -8,7 +9,9 @@ function Header() {
       <TouchableOpacity style={styles.userIcon} activeOpacity={0.7}>
         <Text style={styles.userIconText}>CG</Text>
       </TouchableOpacity>
-      <Text>Header</Text>
+      <TouchableOpacity activeOpacity={0.7}>
+        <Image source={bellNotificationIcon} />
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
