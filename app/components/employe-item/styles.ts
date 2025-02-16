@@ -4,15 +4,15 @@ import {colors, fonts} from '../../themes/globalTheme';
 export const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
+    borderWidth: 1,
+    borderColor: colors.gray[300],
+    backgroundColor: '#fff',
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 15,
-    borderWidth: 1,
-    borderColor: colors.gray[300],
-    backgroundColor: '#fff',
   },
   headerTitles: {
     flexDirection: 'row',
@@ -33,5 +33,9 @@ export const styles = StyleSheet.create({
   chevronIcon: {
     width: 32,
     height: 32,
+  },
+  adicionalDetails: {
+    paddingHorizontal: 15,
+    overflow: 'hidden',
   },
 });
