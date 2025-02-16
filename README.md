@@ -30,3 +30,5 @@ Está no arquivo app/lib/api.ts
 
 
 # Aproveite o projeto! 🎉
+
+vídeo apresentação: https://www.youtube.com/watch?v=cnbxi4jQ26k
