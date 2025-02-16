@@ -1,4 +1,4 @@
-##BeTalent - Teste Prático Mobile
+# BeTalent - Teste Prático Mobile
 Bem-vindo(a) ao Teste Prático Mobile BeTalent!
 
 Este aplicativo exibe uma tabela de colaboradores, consumindo dados de uma API simulada via json-server. A interface permite pesquisar por nome, cargo e telefone, e realiza a formatação de datas e telefones conforme solicitado.
